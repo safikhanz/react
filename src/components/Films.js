@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card, Grid } from 'semantic-ui-react';
+import { Card, Grid, CardContent, Modal, Header, Button } from 'semantic-ui-react';
 
 export default function Films( { data } ) {
     return (
@@ -22,6 +22,19 @@ export default function Films( { data } ) {
                                         <strong>Opening_Crawl</strong>
                                         <p>{films.opening_crawl}</p>
                                     </Card.Description>
+                                </Card.Content>
+                                <Card.Content extra>
+                                    <Modal trigger={<Button>Show Modal</Button>}>
+                                        <Modal.Header>Select a Photo</Modal.Header>
+                                        <Modal.Content>
+                                        <Modal.Description>
+                                            <Header>Default Profile Image</Header>
+                                            <p>
+                                                {films.title}
+                                            </p>
+                                        </Modal.Description>
+                                        </Modal.Content>
+                                    </Modal>
                                 </Card.Content>
                             </Card>
                         </Grid.Column>

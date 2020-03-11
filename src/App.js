@@ -48,7 +48,7 @@ function App() {
         <Container>
           {loading ? (
             <Dimmer active inverted>
-              <Loader inverted> Hello </Loader> 
+              <Loader inverted> Loading </Loader> 
             </Dimmer>
           ) : (
             <Switch>

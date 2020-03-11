@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card, Grid } from 'semantic-ui-react';
+import { Card, Grid, CardContent, Modal, Header, Button } from 'semantic-ui-react';
 
 export default function Planets({data}) {
     return (
@@ -22,6 +22,19 @@ export default function Planets({data}) {
                                         <strong>Flims</strong>
                                         <p>{planets.films}</p>
                                     </Card.Description>
+                                </Card.Content>
+                                <Card.Content extra>
+                                    <Modal trigger={<Button>Show Modal</Button>}>
+                                        <Modal.Header>Select a Photo</Modal.Header>
+                                        <Modal.Content>
+                                        <Modal.Description>
+                                            <Header>Default Profile Image</Header>
+                                            <p>
+                                                {planets.name}
+                                            </p>
+                                        </Modal.Description>
+                                        </Modal.Content>
+                                    </Modal>
                                 </Card.Content>
                             </Card>
                         </Grid.Column>

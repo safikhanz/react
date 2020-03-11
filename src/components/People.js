@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card, Grid } from 'semantic-ui-react';
+import { Card, Grid, CardContent, Modal, Header, Button } from 'semantic-ui-react';
 
 export default function People({ data }) {
     return (
@@ -20,6 +20,19 @@ export default function People({ data }) {
                                         <strong>Homeworld</strong>
                                         <p>{people.homeworld}</p>
                                     </Card.Description>
+                                </Card.Content>
+                                <Card.Content extra>
+                                    <Modal trigger={<Button>Show Modal</Button>}>
+                                        <Modal.Header>Select a Photo</Modal.Header>
+                                        <Modal.Content>
+                                        <Modal.Description>
+                                            <Header>Default Profile Image</Header>
+                                            <p>
+                                                {people.films.join(',')}
+                                            </p>
+                                        </Modal.Description>
+                                        </Modal.Content>
+                                    </Modal>
                                 </Card.Content>
                             </Card>
                         </Grid.Column>
